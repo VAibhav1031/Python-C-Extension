@@ -35,7 +35,10 @@ sudo apt-get install python3-dev gcc
 # Compile a simple extension manually
 gcc -shared -o example.so -fPIC example.c $(python3-config --includes --ldflags)
 ```
-
+- .so is  shared object file , mostly you see them in linux  , for that we have used -shared
+- The -fPIC flag tells the C compiler (like GCC) to generate position-independent code, which is essential for shared libraries.Basically help in running anywhere , without any fixed location
+- The compiler flags that link to the Python library (which are usually provided by python3-config --includes --ldflags)
+  
 ### Windows
 1. Install Visual Studio Build Tools with "Desktop development with C++"
 2. Use x64 Native Tools Command Prompt:
@@ -125,6 +128,7 @@ import example
 # Call the C function
 example.hello_world("Python Developer")
 ```
+-- Still Learning , will update 
 
 ## Future Topics
 The following advanced topics will be added in future updates:
