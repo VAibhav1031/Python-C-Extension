@@ -89,6 +89,8 @@ PyMODINIT_FUNC PyInit_example(void) {
 ## Building with setup.py
 
 For a more standard Python package, create a `setup.py` file:
+- I think  using this  mostly ease of the work of recompilation and managing all other things
+- IT can be good if  you are developing big modules, if you are just learning then normal way is good
 
 ```python
 from setuptools import setup, Extension
