@@ -57,7 +57,7 @@ Create a file `example.c`:
 static PyObject* hello_world(PyObject* self, PyObject* args) {
     const char* name;
     
-    // Parse arguments - expect a single string
+    // Parse arguments - it  expects  a single string
     if (!PyArg_ParseTuple(args, "s", &name)) {
         return NULL;
     }
@@ -78,8 +78,8 @@ static PyMethodDef ExampleMethods[] = {
 static struct PyModuleDef examplemodule = {
     PyModuleDef_HEAD_INIT,
     "example",    // Module name
-    "Example C extension module",  // Module docstring
-    -1,           // Size of per-interpreter state (or -1)
+    "Example C extension module",  // Module docstring , here you can give your fucntion docstring
+    -1,           // Still checking Documentation why -1 
     ExampleMethods
 };
 
