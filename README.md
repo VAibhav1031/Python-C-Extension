@@ -29,8 +29,8 @@ Python C extensions allow you to:
 ### Linux
 ```bash
 # Install required packages
-sudo apt-get update
-sudo apt-get install python3-dev gcc
+sudo pacman -Syuu 
+sudo pacman -S  python3-dev gcc
 
 # Compile a simple extension manually
 gcc -shared -o example.so -fPIC example.c $(python3-config --includes --ldflags)
